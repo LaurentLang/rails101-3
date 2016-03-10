@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rails1013</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container-fluid">
+  <%= render "common/navbar" %>
+  <%= notice_message %> <%#呼叫helpers裡面定義的函式%>
+  <%= yield %> <%#呼叫樣板template : index的呼叫index, show的呼叫show .. 以此類推%>
+</div>
+
+<%= render "common/footer" %>
+
+</body>
+</html>
